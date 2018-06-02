@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown with Multiple checkbox select with jQuery</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+      <style>
+    
+      body {
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+  color: #fff;
+  padding: 50px;
+  width: 300px;
+  margin: 0 auto;
+  background-color: #374954;
+}
+
+
+
+a {
+  color: #fff;
+}
+
+.dropdown dd,
+.dropdown dt {
+  margin: 0px;
+  padding: 0px;
+}
+
+.dropdown ul {
+  margin: -1px 0 0 0;
+}
+
+.dropdown dd {
+  position: relative;
+}
+
+.dropdown a,
+.dropdown a:visited {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  font-size: 12px;
+}
+
+.dropdown dt a {
+  background-color: #4F6877;
+  display: block;
+  padding: 8px 20px 5px 10px;
+  min-height: 25px;
+  line-height: 24px;
+  overflow: hidden;
+  border: 0;
+  width: 272px;
+}
+
+.dropdown dt a span,
+.multiSel span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 3px 2px 0;
+}
+
+.dropdown dd ul {
+  background-color: #4F6877;
+  border: 0;
+  color: #fff;
+  display: none;
+  left: 0px;
+  padding: 2px 15px 2px 5px;
+  position: absolute;
+  top: 2px;
+  width: 280px;
+  list-style: none;
+  height: 100px;
+  overflow: auto;
+}
+
+.dropdown span.value {
+  display: none;
+}
+
+.dropdown dd ul li a {
+  padding: 5px;
+  display: block;
+}
+
+.dropdown dd ul li a:hover {
+  background-color: #fff;
+}
+
+button {
+  background-color: #6BBE92;
+  width: 302px;
+  border: 0;
+  padding: 10px 0;
+  margin: 5px 0;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+select{
+
+  background-color: #4F6877;
+  border: 0;
+  color: #fff;
+
+
+  padding: 2px 15px 2px 5px;
+
+  top: 2px;
+  width: 300px;
+
+  height: 50px;
+margin-bottom: 10px;
+
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+img{
+  border-radius: 50%;
+
+}
+ul{
+  list-style: none;
+  text-align: center;
+}
+li{
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+a{
+  text-decoration: none;
+}
+.a{
+  border:darkcyan;
+  background:darkcyan;
+  padding: 5px;
+}
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+  <body>
+    <ul>
+        
+      <li><img  width="100px" height="100px" src="/imgs/1d8f3ad6dc1ac840a7d4548bb98ba372" alt=""></li>
+      <li> <h3>welcome <%= name %>  </h3></li>
+      <li><a class="a" href="/Tree/add">add node</a></li>
+      <li><a class="a" href="/Tree/list">list nodes</a></li>
+      <li><a class="a" href="/auth/logout">LogOut</a></li>
+    </ul>
+ 
+  

@@ -1,0 +1,125 @@
+
+
+<%include ../layout/header.ejs %>
+
+<h1> add Node </h1>
+<form class="" action="add" method="post" enctype="multipart/form-data">
+
+    <input type="text" id="id!!" name="id" placeholder="id!!">
+    <input type="text" id="fname" name="name" placeholder="Node Name ">
+    <input type="text" name="Parent" placeholder="Parent">
+    <input type="text" name="Child" placeholder="Child">
+
+    <input type="file" name="avatar" value="img" >
+   <!-- <dl class="dropdown">
+  
+      <dt>
+      <a >
+        <span class="hida">Childs</span>
+        <p class="multiSel"></p>
+      </a>
+      </dt>
+  
+      <dd>
+          <div class="mutliSelect">
+              <ul>
+                  <li>
+                      <input type="checkbox" value="" />Apple</li>
+                  <li>
+                      <input type="checkbox" name ="yasmeen"value="Blackberry" />Blackberry</li>
+                  <li>
+                      <input type="checkbox" name ="yasmeen"value="HTC" />HTC</li>
+                  <li>
+                      <input type="checkbox" name ="yasmeen"value="Sony Ericson" />Sony Ericson</li>
+                  <li>
+                      <input type="checkbox" value="Motorola" />Motorola</li>
+                  <li>
+                      <input type="checkbox" value="Nokia" />Nokia</li>
+              </ul>
+          </div>
+      </dd>
+  
+  
+  </dl>-->
+  
+
+ 
+  <input type="submit" value="Add">
+  
+  </form>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  
+  
+  
+    <script type="text/javascript">
+    $(".dropdown dt a").on('click', function() {
+      $(".dropdown dd ul").slideToggle('fast');
+    });
+  
+    $(".dropdown dd ul li a").on('click', function() {
+      $(".dropdown dd ul").hide();
+    });
+  
+    function getSelectedValue(id) {
+      return $("#" + id).find("dt a span.value").html();
+    }
+  
+    $(document).bind('click', function(e) {
+  
+      var $clicked = $(e.target);
+      if (!$clicked.parents().hasClass("dropdown")) $(".dropdown dd ul").hide();
+    });
+        var selections = [];
+    $('.mutliSelect input[type="checkbox"]').on('click', function() {
+  
+      var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
+        title = $(this).val() + ",";
+        //console.log(title);
+  
+      if ($(this).is(':checked')) {
+        selections.push($(this).val());
+        console.log(selections);
+        //body.select=selections;
+        $sel=selections;
+  
+  
+        var html = '<span title="' + title + '">' + title + '</span>';
+        $('.multiSel').append(html);
+        $(".hida").hide();
+      } else {
+        $('span[title="' + title + '"]').remove();
+        var ret = $(".hida");
+        $('.dropdown dt a').append(ret);
+  
+      }
+    });
+  
+  
+    </script>
+  
+  
+  
+  
+ 
+
+<!--<form action="/Tree/add" method="post" enctype="multipart/form-data">
+  <input type="text" name="_id" value="" placeholder=" your id ! " required><br>
+
+  <input type="text" name="title" value="" placeholder=" product name ! " required><br>
+  <input type="text" name="price" value="" placeholder=" product price ! " required><br>
+  <select name="category" id="" required>
+
+
+      <option value="category">category</option>
+        <option value="hots">hots</option>
+        <option value="shochlets">shochlets</option>
+        <option value="cold">cold</option>
+
+  </select><br>
+
+  <input type="file" name="avatar" value="" required>
+
+    <input type="submit" value="save">
+</form>-->
+
+<%include ../layout/footer.ejs %>
